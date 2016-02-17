@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    Dom created using the createClass componentization
+    <br/>
+    <br/>
+    <div id="react-app"></div>
+    <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+    <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
+    <script>
+    var contactList = [{
+        'key': 1,
+        'name': 'James Nelson',
+        'mailto': 'mailto:james@jamesknelson.com'
+    }, {
+        'key': 2,
+        'name': 'Tim Nelson',
+        'mailto': null
+    }, {
+        'key': 3,
+        'name': 'Ash Nelson',
+        'mailto': 'mailto:ash@jamesknelson.com'
+    }];
+
+
+    //Define class component 
+    var ContactItem = React.createClass({
+        propTypes: {
+            'name': React.PropTypes.string.isRequired,
+            'mailto': React.PropTypes.string.isRequired,
+            'desc': React.PropTypes.string
+        },
+ 
+
+
+        render: function() {
+            return React.createElement('li', {
+                    'key': this.props.name
+                },
+                React.createElement('h2', {}, this.props.name),
+                React.createElement('a', {
+                        href: 'mailto:' + this.props.mailto
+                    },
+                    this.props.mailto)
+            );
+        }, 
+    });
+
+    var filteredContactList = contactList
+        .filter(function(_contact) {
+            return _contact.mailto;
+        })
+        .map(function(_contact, _index) {
+            return React.createElement(ContactItem, _contact);
+    });
+
+    var rootElement =
+        React.createElement('div', {},
+            React.createElement('h1', {}, "Contacts"),
+            React.createElement('ul', {}, filteredContactList)
+        );
+
+
+    ReactDOM.render(rootElement, document.getElementById('react-app'));
+
+
+
+    </script>
+</body>
+
+</html>

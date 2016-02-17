@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <div id="react-app"></div>
+
+<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
+<script>
+var contactList=[
+	{'key':1, 'name':'James Nelson','mailto':'james@jamesknelson.com'}, 
+	{'key':2, 'name':'Ash Nelson','mailto':'ash@jamesknelson.com'} 
+];
+var filteredContactList= contactList.map(function(_contact) {
+  return 
+});
+
+return React.createElement('li', {key: contact.key},
+      React.createElement('h2', {}, contact.name),
+      React.createElement('a', {href: 'mailto:'+contact.email}, contact.email)
+    )
+
+
+var record1= React.createElement('li', {},
+	        React.createElement('h2', {}, "James Nelson"),
+	        React.createElement('a', {href: 'mailto:james@jamesknelson.com'}, 'james@jamesknelson.com')
+	      );
+var record2=
+	var rootElement =
+	  React.createElement('div', {}, 
+	    React.createElement('h1', {}, "Contacts"),
+	    React.createElement('ul', {},    record1, record2  ) 
+	  )
+
+ReactDOM.render(rootElement, document.getElementById('react-app'));
+
+// var plainSingleElemReact= 
+// React.createElement('div',
+// {'className':'blank-test',
+// 'data-switch':'off'},
+// 'helloWorld');
+
+// ReactDOM.render(plainSingleElemReact, document.getElementById('react-app'),
+// 	function(){alert('rendered');}
+// );
+ 
+
+
+</script>
+</body>
+
+
+</html>

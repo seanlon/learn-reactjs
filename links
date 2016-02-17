@@ -1,0 +1,38 @@
+===links===
+https://facebook.github.io/react/docs/getting-started.html
+
+https://blog.risingstack.com/the-react-way-getting-started-tutorial/
+
+https://github.com/RisingStack/react-way-getting-started
+
+http://babeljs.io/blog/2015/02/23/babel-loves-react/
+
+https://gist.github.com/wincent/598fa75e22bdfa44cf47
+
+http://love2dev.com/#!article/What-is-Isomorphic-JavaScript-and-When-Should-it-Be-Used
+
+http://love2dev.com/#!article/What-is-Isomorphic-JavaScript-and-When-Should-it-Be-Used
+
+http://code.tutsplus.com/courses/getting-started-with-reactjs
+
+http://shop.oreilly.com/product/0636920039716.do
+
+https://www.quora.com/What-is-the-best-book-to-learn-React
+===keywords==
+browserify - like requirejs [load other js lib for cur js to use]
+webpack
+babel
+relay
+graphql
+es6 / es2015
+
+
+
+------------basic react vanilla--------------------
+
+--1) vanilla react-----
+api--
+https://facebook.github.io/react/docs/top-level-api.html
+
+
+--2) es 6----
