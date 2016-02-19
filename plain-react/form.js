@@ -15,7 +15,9 @@
 
 
   //contact form entry
-  var contact = { name: '', email: '', description: '' }
+  var contact = { name: 'default name value',
+   email: 'default email value', 
+   description: 'default desc value' }
 
   //CLASS COMPONENT
   //contact list dipsplay
@@ -47,36 +49,58 @@
       },
       render: function() {
 
-          xform= React.createElement('form',{'className':'ContactForm'});
-          xinputName = React.createElement('input', {
-              'className': 'input-name',
-              'type': 'text',
-              'placeholder': 'Insert name here',
-              'value': this.props._contact.name 
+          // xform = React.createElement('form', { 'className': 'ContactForm' });
+          // xinputName = React.createElement('input', {
+          //     'className': 'input-name',
+          //     'type': 'text',
+          //     'placeholder': 'Insert name here',
+          //     'value': this.props._contact.name
 
-          });    
-          xinputEmail = React.createElement('input', {
-              'className': 'input-email',
-              'type': 'text',
-              'placeholder': 'Insert email here',
-              'value': this.props._contact.email 
-          });
-          xtextAreaDesc = React.createElement('textarea', {
-              'className': 'textarea-desc', 
-              'placeholder': 'Insert desc here',
-              'value': this.props._contact.desc 
-          });
-         xbtnSubmit = React.createElement('button', {
-              'className': 'btn-submit', 
-              'value': 'Submit new entry',
-              'type': 'submit' 
-          });
-         
+          // });
+          // xinputEmail = React.createElement('input', {
+          //     'className': 'input-email',
+          //     'type': 'text',
+          //     'placeholder': 'Insert email here',
+          //     'value': this.props._contact.email
+          // });
+          // xtextAreaDesc = React.createElement('textarea', {
+          //     'className': 'textarea-desc',
+          //     'placeholder': 'Insert desc here',
+          //     'value': this.props._contact.desc
+          // });
+          // xbtnSubmit = React.createElement('button', {
+          //     'className': 'btn-submit',
+          //     'value': 'Submit new entry',
+          //     'type': 'submit'
+          // });
 
-          return React.createElement(
-                {},
 
-            );
+          return React.createElement('form', { 'className': 'ContactForm' },
+              React.createElement('input', {
+                  'className': 'input-name',
+                  'type': 'text',
+                  'placeholder': 'Insert name here',
+                  'value': this.props.contact.name
+
+              }),
+                React.createElement('input', {
+                              'className': 'input-email',
+                              'type': 'text',
+                              'placeholder': 'Insert email here',
+                              'value': this.props.contact.email
+              }),
+                React.createElement('textarea', {
+                              'className': 'textarea-desc',
+                              'placeholder': 'Insert desc here',
+                              'defaultValue': this.props.contact.desc
+              }),
+                React.createElement('button', {
+                  'className': 'btn-submit',
+                  'value': 'Submit new entry',
+                  'type': 'submit'
+              })
+
+          );
 
       }
 
@@ -93,7 +117,8 @@
 
   var rootElement = React.createElement('div', {},
       React.createElement('h1', {}, "Contacts"),
-      React.createElement('ul', {}, filteredContactList)
+      React.createElement('ul', {}, filteredContactList),
+      React.createElement(ContactForm, {'contact':contact}  )
   );
 
   ReactDOM.render(rootElement, document.getElementById('react-app'));
