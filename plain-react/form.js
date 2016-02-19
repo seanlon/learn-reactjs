@@ -92,13 +92,12 @@
                 React.createElement('textarea', {
                               'className': 'textarea-desc',
                               'placeholder': 'Insert desc here',
-                              'defaultValue': this.props.contact.desc
+                               
               }),
                 React.createElement('button', {
-                  'className': 'btn-submit',
-                  'value': 'Submit new entry',
+                  'className': 'btn-submit', 
                   'type': 'submit'
-              })
+              },"Add New Entry")
 
           );
 
@@ -115,9 +114,9 @@
           return React.createElement(ContactItem, _contact);
       });
 
-  var rootElement = React.createElement('div', {},
-      React.createElement('h1', {}, "Contacts"),
-      React.createElement('ul', {}, filteredContactList),
+  var rootElement = React.createElement('div', {className: 'ContactView'},
+      React.createElement('h1',  {className: 'ContactView-title'},   "Contacts"),
+      React.createElement('ul', {className: 'ContactView-list'}, filteredContactList),
       React.createElement(ContactForm, {'contact':contact}  )
   );
 
