@@ -93,7 +93,7 @@
                               'className': 'textarea-desc',
                               'placeholder': 'Insert desc here',
                                
-              }),
+              },this.props.contact.description),
                 React.createElement('button', {
                   'className': 'btn-submit', 
                   'type': 'submit'
